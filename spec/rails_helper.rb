@@ -1,7 +1,8 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
-require 'spec_helper'
+
 require File.expand_path("../../config/environment", __FILE__)
+require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'shoulda/matchers'
@@ -28,7 +29,7 @@ RSpec.configure do |config|
 
   config.include Devise::TestHelpers, :type => :controller
 
-  #config.include Features, :type => :feature
+#  config.include Features, :type => :feature
 
   config.include Warden::Test::Helpers
   config.before :suite do

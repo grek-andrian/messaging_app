@@ -19,7 +19,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'auto_html', '~> 2.0'
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'faker'
 
 #design
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
@@ -32,12 +31,17 @@ gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 gem 'sdoc', '~> 0.4.2'
 
 group :development, :test do
+  gem 'byebug'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.8'
   gem 'capybara', '~> 2.12', '>= 2.12.1'
-  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
-  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+end
 
+group :test do
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'faker', '~> 1.6.1'
 end
 
 group :development do
